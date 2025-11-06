@@ -64,7 +64,7 @@ def run_benchmarks(test_values: List[int]) -> str:
 
     # Tempo vs n
     plt.figure(figsize=(8, 5))
-    plt.plot(ns, rec_times, marker="o", label="Recursivo (memo)")
+    plt.plot(ns, rec_times, marker="o", label="Recursivo")
     plt.plot(ns, dp_times, marker="o", label="Dinâmico")
     plt.xlabel("N Valores de Entrada")
     plt.ylabel("Tempo (s)")
@@ -95,6 +95,6 @@ def run_benchmarks(test_values: List[int]) -> str:
 
 
 if __name__ == "__main__":
-    test_values = [4, 10, 20, 30, 40, 50, 100]
+    test_values = [4, 10, 20, 30, 40, 50]
     print("\n=== Comparativo: Partições Inteiras ===\n")
     run_benchmarks(test_values)
