@@ -2,7 +2,7 @@ Explicação curta sobre memoização (em português):
 
 O que é: memoização é uma técnica de otimização que armazena (cache) o resultado de chamadas de função para entradas já calculadas, evitando recomputações caras quando os mesmos subproblemas aparecem novamente.
 
-Como funciona no seu código:
+Como funciona no código:
 
 A função recebe um dicionário memo: dict[tuple[int,int], int].
 Antes de calcular, verifica se a chave (n, k) já existe em memo; se sim, retorna o valor armazenado.
