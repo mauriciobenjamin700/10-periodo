@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="HuUti2PZj7LO8F45YTlo" name="Page-1">
+        <mxGraphModel dx="1664" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="14" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Pesquisas bibliográficas a&amp;nbsp; cerca do problema" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="200" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Implementação de algoritmos&amp;nbsp;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="200" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Elaboração de&amp;nbsp; cenários de teste" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="200" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Avaliação dos algoritmos" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="200" width="130" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
