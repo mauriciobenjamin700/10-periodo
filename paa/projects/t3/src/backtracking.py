@@ -82,6 +82,11 @@ def interval_scheduling_backtracking(
     return backtrack(0, [], intervals)
 
 
+__all__ = [
+    "interval_scheduling_backtracking",
+]
+
+
 if __name__ == "__main__":
     intervals = [
         (1, 4), (3, 5), (0, 6), (5, 7), (3, 9), (5, 9), (6, 10), (8, 11)

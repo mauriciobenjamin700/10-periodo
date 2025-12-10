@@ -27,6 +27,10 @@ def interval_scheduling_greedy(
     return selected
 
 
+__all__ = [
+    "interval_scheduling_greedy",
+]
+
 if __name__ == "__main__":
 
     intervals = [
