@@ -1,0 +1,29 @@
+[
+    {
+        "Algorithm": "Backtracking",
+        "Dataset": "Random",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000422",
+        "Memory (KB)": "0.55"
+    },
+    {
+        "Algorithm": "Backtracking",
+        "Dataset": "Sorted",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000397",
+        "Memory (KB)": "0.55"
+    },
+    {
+        "Algorithm": "Backtracking",
+        "Dataset": "Shuffled",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000407",
+        "Memory (KB)": "0.55"
+    }
+]

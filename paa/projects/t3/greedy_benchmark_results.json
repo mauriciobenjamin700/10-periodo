@@ -1,0 +1,110 @@
+[
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000013",
+        "Memory (KB)": "0.30"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "100",
+        "Variant": "2",
+        "Result Size": "28",
+        "Time (s)": "0.000018",
+        "Memory (KB)": "2.45"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
+        "Time (s)": "0.000107",
+        "Memory (KB)": "23.59"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.001040",
+        "Memory (KB)": "234.55"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Sorted",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000006",
+        "Memory (KB)": "0.30"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Sorted",
+        "Quantity": "100",
+        "Variant": "2",
+        "Result Size": "28",
+        "Time (s)": "0.000009",
+        "Memory (KB)": "1.08"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Sorted",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
+        "Time (s)": "0.000039",
+        "Memory (KB)": "15.85"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Sorted",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.000306",
+        "Memory (KB)": "156.48"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000005",
+        "Memory (KB)": "0.30"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "100",
+        "Variant": "2",
+        "Result Size": "28",
+        "Time (s)": "0.000014",
+        "Memory (KB)": "1.08"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
+        "Time (s)": "0.000094",
+        "Memory (KB)": "23.59"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.000988",
+        "Memory (KB)": "234.57"
+    }
+]
