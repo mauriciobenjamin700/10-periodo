@@ -1,4 +1,4 @@
-**Interval Scheduling — Algoritmos e resultados**
+# *Interval Scheduling — Algoritmos e resultados*
 
 Este repositório contém duas implementações para o problema de
 seleção de intervalos não sobrepostos (maximizar o número de
@@ -7,7 +7,7 @@ backtracking/força-bruta (`src/backtracking.py`). Também há um
 gerador de datasets em `src/data.py` que cria conjuntos de teste
 ordenados, embaralhados e aleatórios em `datasets/`.
 
-**Algoritmos implementados**
+# **Algoritmos implementados**
 
 - `interval_scheduling_greedy` (guloso): ordena os intervalos pelo
 tempo de término crescente e seleciona cada intervalo cujo início
@@ -19,6 +19,13 @@ incluir/excluir cada intervalo recursivamente e retorna a
 solução de maior cardinalidade encontrada — equivalente a
 força-bruta (exata), usada apenas para validação em instâncias
 pequenas.
+- `interval_scheduling_dp` (programação dinâmica): implementada
+como alternativa exata O(n log n). Ordena os intervalos por fim,
+usa busca binária para encontrar o próximo intervalo compatível
+e aplica DP para calcular a solução ótima com complexidade
+O(n log n) em tempo e O(n) em espaço. Esta implementação foi
+adicionada porque o backtracking torna-se impraticável para
+n maiores (ex.: >= 100).
 
 **Complexidade**
 
@@ -34,6 +41,13 @@ pequenas.
 Essas diferenças fazem com que o algoritmo guloso seja prático
 para grandes entradas, enquanto o backtracking explode rapidamente
 em tempo e memória quando `n` cresce.
+
+Nota sobre a solução DP:
+- A implementação `interval_scheduling_dp` resolve exatamente o
+  mesmo problema (máxima cardinalidade) com custo O(n log n).
+  Em testes práticos do repositório ela encontra a solução ótima
+  muito mais rápido que o backtracking, e é recomendada quando
+  a solução exata é necessária mas `n` é grande.
 
 **Teste realizado (saída registrada)**
 O comando utilizado foi `python3 test.py`. Abaixo está o trecho
@@ -72,6 +86,14 @@ dataset (esperado: ordenação domina custo, seleção é linear).
 - O backtracking executou apenas a `Variant 1` (pequena) e parou
 nas variantes seguintes — por isso aparece apenas um resultado.
 
+- O benchmark também inclui resultados para "Dynamic Programming"
+  (a implementação `interval_scheduling_dp`). Os resultados mostram
+  que a DP tem desempenho semelhante ao guloso em ordem de grandeza
+  (ambas escaláveis para n até milhares), mas a DP é exata enquanto
+  o guloso também é exato para este problema específico (não
+  ponderado). Em cenários onde a correção exata for crítica e os
+  dados forem maiores, prefira a versão DP ao backtracking.
+
 Por que "o algoritmo morreu aqui"
 - Causa: complexidade exponencial do backtracking. Para variantes
 com dezenas/centenas de intervalos (ex.: 100, 1000, 10000), o
@@ -94,6 +116,14 @@ Recomendações práticas
   capacidade de sua máquina).
 - Se depois quiser resolver variação com pesos (weighted
   interval scheduling), implemente a solução DP O(n log n).
+
+Atualização prática do repositório
+- Para evitar que o teste "morra" em entradas grandes, o repositório
+  inclui agora a versão DP (`interval_scheduling_dp`) em
+  `src/backtracking.py`. Use-a quando precisar da solução exata e
+  os tamanhos de entrada forem maiores que o tolerável para
+  backtracking. O `test.py`/benchmarks podem ser configurados para
+  utilizar automaticamente DP quando `n` exceder um limite.
 
 Como reproduzir os testes
 
