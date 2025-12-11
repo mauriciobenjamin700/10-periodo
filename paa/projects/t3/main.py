@@ -1,5 +1,7 @@
 from src.charts import load_data, plot_benchmark_results
+from src.run import main
 
+main()
 
 data = load_data("benchmark_results.json")
 

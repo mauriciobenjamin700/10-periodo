@@ -95,6 +95,7 @@ nas variantes seguintes — por isso aparece apenas um resultado.
   dados forem maiores, prefira a versão DP ao backtracking.
 
 Por que "o algoritmo morreu aqui"
+
 - Causa: complexidade exponencial do backtracking. Para variantes
 com dezenas/centenas de intervalos (ex.: 100, 1000, 10000), o
 número de combinações possíveis torna a execução impraticável.
@@ -118,6 +119,7 @@ Recomendações práticas
   interval scheduling), implemente a solução DP O(n log n).
 
 Atualização prática do repositório
+
 - Para evitar que o teste "morra" em entradas grandes, o repositório
   inclui agora a versão DP (`interval_scheduling_dp`) em
   `src/backtracking.py`. Use-a quando precisar da solução exata e

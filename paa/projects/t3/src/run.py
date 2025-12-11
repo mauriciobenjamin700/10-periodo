@@ -27,7 +27,7 @@ def main() -> None:
     for algo_name, algo_func in algorithms.items():
         for data_name, data_variants in datasets.items():
             print(f"Algorithm: {algo_name}, Dataset: {data_name}")
-            for i, dataset in enumerate(data_variants[:2]):
+            for i, dataset in enumerate(data_variants):
                 result, elapsed, memory = benchmark(algo_func, dataset)
                 print(
                     f"  Variant {i + 1}: "

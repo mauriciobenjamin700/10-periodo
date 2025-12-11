@@ -88,16 +88,19 @@ def interval_scheduling_backtracking(
 def interval_scheduling_dp(
     intervals: list[tuple[int, int]]
 ) -> list[tuple[int, int]]:
-    """Compute optimal (maximum cardinality) non-overlapping set using DP.
+    """
+    Seleciona o maior número de intervalos não sobrepostos usando
+    programação dinâmica.
 
-    Runs in O(n log n) time by sorting intervals by end and using binary
-    search to find the next compatible interval for each one.
-    Returns the selected list of intervals.
+    Args:
+        intervals (list[tuple[int, int]]): Lista de tuplas representando
+            os intervalos (início, fim).
+    Returns:
+        list[tuple[int, int]]: Lista de intervalos selecionados.
     """
     if not intervals:
         return []
 
-    # Sort by end time
     intervals = sorted(intervals, key=lambda x: x[1])
     n = len(intervals)
 
@@ -106,28 +109,28 @@ def interval_scheduling_dp(
 
     next_idx = [0] * n
     for i in range(n):
+        # Encontra o próximo intervalo que começa após o fim do intervalo i
+        # usando busca binária
         j = bisect.bisect_left(starts, ends[i], lo=i + 1)
         next_idx[i] = j
 
-    # DP table: dp[i] = optimal count using intervals[i:]
-    dp = [0] * (n + 1)
-    for i in range(n - 1, -1, -1):
-        take = 1 + dp[next_idx[i]]
-        skip = dp[i + 1]
-        dp[i] = take if take > skip else skip
+    dp = [0] * (n + 1)  # dp[i] = tamanho máximo selecionável a partir de i
+    for i in range(n - 1, -1, -1):  # de n-1 até 0
+        take = 1 + dp[next_idx[i]]  # se pegar o intervalo i
+        skip = dp[i + 1]  # se pular o intervalo i
+        dp[i] = take if take > skip else skip  # melhor dos dois
 
-    # Reconstruct solution
     res = []
     i = 0
     while i < n:
-        take = 1 + dp[next_idx[i]]
-        if take >= dp[i + 1]:
-            res.append(intervals[i])
-            i = next_idx[i]
-        else:
-            i += 1
+        take = 1 + dp[next_idx[i]]  # se pegar o intervalo i
+        if take >= dp[i + 1]:  # se pegar for melhor ou igual a pular
+            res.append(intervals[i])  # inclui o intervalo i
+            i = next_idx[i]  # pula para o próximo compatível
+        else:  # pular o intervalo i
+            i += 1  # avança para o próximo intervalo
 
-    return res
+    return res  # retorna a solução construída
 
 
 __all__ = [

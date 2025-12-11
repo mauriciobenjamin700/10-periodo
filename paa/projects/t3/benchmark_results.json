@@ -5,7 +5,7 @@
         "Quantity": "10",
         "Variant": "1",
         "Result Size": "8",
-        "Time (s)": "0.000017",
+        "Time (s)": "0.000039",
         "Memory (KB)": "0.30"
     },
     {
@@ -14,16 +14,34 @@
         "Quantity": "100",
         "Variant": "2",
         "Result Size": "28",
-        "Time (s)": "0.000023",
+        "Time (s)": "0.000029",
         "Memory (KB)": "2.39"
     },
     {
         "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
+        "Time (s)": "0.000119",
+        "Memory (KB)": "23.59"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Random",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.001100",
+        "Memory (KB)": "234.55"
+    },
+    {
+        "Algorithm": "Greedy",
         "Dataset": "Sorted",
         "Quantity": "10",
         "Variant": "1",
         "Result Size": "8",
-        "Time (s)": "0.000006",
+        "Time (s)": "0.000005",
         "Memory (KB)": "0.30"
     },
     {
@@ -32,44 +50,98 @@
         "Quantity": "100",
         "Variant": "2",
         "Result Size": "28",
-        "Time (s)": "0.000017",
+        "Time (s)": "0.000010",
         "Memory (KB)": "1.08"
     },
     {
         "Algorithm": "Greedy",
-        "Dataset": "Shuffled",
-        "Quantity": "10",
-        "Variant": "1",
-        "Result Size": "8",
-        "Time (s)": "0.000006",
-        "Memory (KB)": "0.30"
-    },
-    {
-        "Algorithm": "Greedy",
-        "Dataset": "Shuffled",
-        "Quantity": "100",
-        "Variant": "2",
-        "Result Size": "28",
-        "Time (s)": "0.000025",
-        "Memory (KB)": "1.08"
-    },
-    {
-        "Algorithm": "Dynamic Programming",
-        "Dataset": "Random",
-        "Quantity": "10",
-        "Variant": "1",
-        "Result Size": "8",
-        "Time (s)": "0.000023",
-        "Memory (KB)": "0.58"
-    },
-    {
-        "Algorithm": "Dynamic Programming",
-        "Dataset": "Random",
-        "Quantity": "100",
-        "Variant": "2",
-        "Result Size": "19",
+        "Dataset": "Sorted",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
         "Time (s)": "0.000038",
+        "Memory (KB)": "15.85"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Sorted",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.000421",
+        "Memory (KB)": "156.48"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000006",
+        "Memory (KB)": "0.30"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "100",
+        "Variant": "2",
+        "Result Size": "28",
+        "Time (s)": "0.000015",
+        "Memory (KB)": "1.08"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "76",
+        "Time (s)": "0.000096",
+        "Memory (KB)": "23.59"
+    },
+    {
+        "Algorithm": "Greedy",
+        "Dataset": "Shuffled",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "254",
+        "Time (s)": "0.001001",
+        "Memory (KB)": "234.57"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Random",
+        "Quantity": "10",
+        "Variant": "1",
+        "Result Size": "8",
+        "Time (s)": "0.000043",
+        "Memory (KB)": "0.58"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Random",
+        "Quantity": "100",
+        "Variant": "2",
+        "Result Size": "19",
+        "Time (s)": "0.000033",
         "Memory (KB)": "4.23"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Random",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "38",
+        "Time (s)": "0.001375",
+        "Memory (KB)": "62.94"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Random",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "66",
+        "Time (s)": "0.018473",
+        "Memory (KB)": "673.30"
     },
     {
         "Algorithm": "Dynamic Programming",
@@ -77,7 +149,7 @@
         "Quantity": "10",
         "Variant": "1",
         "Result Size": "8",
-        "Time (s)": "0.000014",
+        "Time (s)": "0.000017",
         "Memory (KB)": "0.58"
     },
     {
@@ -86,8 +158,26 @@
         "Quantity": "100",
         "Variant": "2",
         "Result Size": "19",
-        "Time (s)": "0.000041",
+        "Time (s)": "0.000030",
         "Memory (KB)": "4.23"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Sorted",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "38",
+        "Time (s)": "0.001319",
+        "Memory (KB)": "62.94"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Sorted",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "66",
+        "Time (s)": "0.016486",
+        "Memory (KB)": "673.30"
     },
     {
         "Algorithm": "Dynamic Programming",
@@ -95,7 +185,7 @@
         "Quantity": "10",
         "Variant": "1",
         "Result Size": "8",
-        "Time (s)": "0.000014",
+        "Time (s)": "0.000016",
         "Memory (KB)": "0.58"
     },
     {
@@ -104,7 +194,25 @@
         "Quantity": "100",
         "Variant": "2",
         "Result Size": "20",
-        "Time (s)": "0.000037",
+        "Time (s)": "0.000038",
         "Memory (KB)": "4.23"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Shuffled",
+        "Quantity": "1000",
+        "Variant": "3",
+        "Result Size": "37",
+        "Time (s)": "0.001479",
+        "Memory (KB)": "62.94"
+    },
+    {
+        "Algorithm": "Dynamic Programming",
+        "Dataset": "Shuffled",
+        "Quantity": "10000",
+        "Variant": "4",
+        "Result Size": "66",
+        "Time (s)": "0.017431",
+        "Memory (KB)": "673.33"
     }
 ]
