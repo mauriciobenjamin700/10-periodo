@@ -1,3 +1,6 @@
+import bisect
+
+
 def is_compatible(
     selected: list[tuple[int, int]],
     interval: tuple[int, int]
@@ -82,8 +85,54 @@ def interval_scheduling_backtracking(
     return backtrack(0, [], intervals)
 
 
+def interval_scheduling_dp(
+    intervals: list[tuple[int, int]]
+) -> list[tuple[int, int]]:
+    """Compute optimal (maximum cardinality) non-overlapping set using DP.
+
+    Runs in O(n log n) time by sorting intervals by end and using binary
+    search to find the next compatible interval for each one.
+    Returns the selected list of intervals.
+    """
+    if not intervals:
+        return []
+
+    # Sort by end time
+    intervals = sorted(intervals, key=lambda x: x[1])
+    n = len(intervals)
+
+    starts = [s for s, _ in intervals]
+    ends = [e for _, e in intervals]
+
+    next_idx = [0] * n
+    for i in range(n):
+        j = bisect.bisect_left(starts, ends[i], lo=i + 1)
+        next_idx[i] = j
+
+    # DP table: dp[i] = optimal count using intervals[i:]
+    dp = [0] * (n + 1)
+    for i in range(n - 1, -1, -1):
+        take = 1 + dp[next_idx[i]]
+        skip = dp[i + 1]
+        dp[i] = take if take > skip else skip
+
+    # Reconstruct solution
+    res = []
+    i = 0
+    while i < n:
+        take = 1 + dp[next_idx[i]]
+        if take >= dp[i + 1]:
+            res.append(intervals[i])
+            i = next_idx[i]
+        else:
+            i += 1
+
+    return res
+
+
 __all__ = [
     "interval_scheduling_backtracking",
+    "interval_scheduling_dp"
 ]
 
 

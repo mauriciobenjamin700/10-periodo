@@ -1,6 +1,6 @@
 import json
 
-from src.backtracking import interval_scheduling_backtracking
+from src.backtracking import interval_scheduling_dp
 from src.data import random, sorted, shuffled
 from src.eval import benchmark
 from src.greedy import interval_scheduling_greedy
@@ -13,7 +13,7 @@ def main() -> None:
     """
     algorithms = {
         "Greedy": interval_scheduling_greedy,
-        "Backtracking": interval_scheduling_backtracking,
+        "Dynamic Programming": interval_scheduling_dp,
     }
 
     datasets = {
